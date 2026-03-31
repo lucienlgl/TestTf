@@ -1,16 +1,5 @@
-ROSTemplateFormatVersion: "2015-09-01"
-Parameters:
-  VpcName:
-    Type: String
-    Default: git-demo
-Resources:
-  Vpc:
-    Type: ALIYUN::ECS::VPC
-    Properties:
-      VpcName:
-        Ref: VpcName
-      CidrBlock: 192.168.0.0/16
-Outputs:
-  VpcId:
-    Value:
-      Ref: Vpc
+template-file-path: templates/my-vpc-demo.yaml
+parameters: 
+  VpcName: git-demo-1
+tags:
+  env: test
